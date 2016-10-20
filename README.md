@@ -55,5 +55,32 @@ esp-->|                |        |                |       |                |
 
 ```
 
+PolyAsciiShellGen provides extra functionnalities in addition of automates the Riley Eller’s technique. It allows to add an extra NOP sleed between the shellcode loader and the decoded shellcode in order to reliable the exploit. Moreover, it optimises the shellcode encoding process in order to return an ASCII shellcode as small as possible.
+
+## Options and return value
+
+<esp offset>
+
+The esp offset parameter allows to adjust the position of the stack pointer from its original position, when the loader code is executed. This value can be very useful to add an extra NOP sleed between the shellcode loader and the builded shellcode. This paramater can be a positive or a negative value.
+
+
+<nop sleed factor>
+
+The NOP sleed factor parameter allows to add a nop sleed bridge between the shellcode loadder and the builded shellcode. This parameter is an integer which allows to add nop instructions by group of four bytes. This nop sleed must be used to reliable the exploit, not to set the shellcode padding.
+
+
+<shellcode>
+
+The shellcode parameters is the shellcode in escaping format "...\xcd\x80...". If the lenght of the shellcode in entry is not a multiplier of four bytes, it is padded with extra nop byte.
+
+
+Return value
+
+The return value of this command is the printable encoded shellcode. The resulting printable encoded shellcode is generated randomly between each execution. So, you can generate a set of printable encoded shellcode with different signatures from one original shellcode. The ASCII characteres set use for the encoding is the following:
+"%_01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-". 
+
+
+
+
 
 

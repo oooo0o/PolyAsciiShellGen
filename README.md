@@ -240,6 +240,8 @@ $3 = 528
 (gdb)
 ```
 
+Have fun !!
+
 ## Links
 
 - [1] Bypassing MSB Data Filters for Buffer Overflow Exploits on Intel Platforms, Riley Eller “caezar”: 

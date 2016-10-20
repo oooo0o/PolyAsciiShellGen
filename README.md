@@ -31,7 +31,7 @@ Riley Eller
 
 Below, an illustration of the shellcode loading techique realized by the shellcode loader.
 
-```
+<span style="color: green"> 
  1)      Low addresse      2)      Low addresse     3)      Low addresse
       |                |        |                |       |                |
 eip-->|----------------|        |----------------|       |----------------|
@@ -53,7 +53,7 @@ esp-->|                |        |                |       |                |
       |                |        |----------------|       |----------------|
          High adresse              High adresse             High adresse
 
-```
+</span>
 
 PolyAsciiShellGen provides extra functionnalities in addition of automates the Riley Eller’s technique. It allows to add an extra NOP sleed between the shellcode loader and the decoded shellcode in order to reliable the exploit. Moreover, it optimises the shellcode encoding process in order to return an ASCII shellcode as small as possible.
 

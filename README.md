@@ -3,6 +3,13 @@
 PolyAsciiShellGen is a simple alphanumeric shellcode encoder coded in C. This program automates the [Riley Eller's technic](http://julianor.tripod.com/bc/bypass-msb.txt) to bypass MSB data filters, for buffer overflow exploits, on Intel platforms. It provides extra functionnalities such as the NOP sleed generation and the size optimisation. It takes a shellcode to encode in entry and return a printable shellcode directly useable. 
 
 
+    - Synopsis
+    - Description
+    - Options and return value
+    - Example
+    - Debugging
+    - Links
+
 
 ## Synopsis
 

@@ -13,7 +13,7 @@ PolyAsciiShellGen is a simple alphanumeric shellcode encoder coded in C. This pr
 
 ## Synopsis
 
-Get and buil PolyAsciiShellGen.
+Get and build PolyAsciiShellGen.
 
 ```
 $ git clone https://github.com/VincentDary/PolyAsciiShellGen.git

